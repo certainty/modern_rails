@@ -230,6 +230,7 @@ GEM
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
     rubyzip (2.3.2)
+    rufo (0.13.0)
     safe_type (1.1.1)
     selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
@@ -319,6 +320,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.4)
   rspec-rails
+  rufo
   selenium-webdriver
   sorbet
   sorbet-rails
