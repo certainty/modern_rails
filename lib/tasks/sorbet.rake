@@ -1,4 +1,11 @@
 namespace :sorbet do
+  desc "Typecheck the code base"
+  task check: :environment do
+    Bundler.with_unbundled_env do
+      system("bundle exec srb tc")
+    end
+  end
+
   namespace :update do
     desc "Update Sorbet and Sorbet Rails RBIs."
     task all: :environment do
