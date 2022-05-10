@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # typed: ignore
 require_relative "boot"
 
@@ -19,6 +21,6 @@ module Titter
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.paths.add 'packages', glob: '*/app/{*,*/concerns}', eager_load: true
+    config.paths.add "packages", glob: "*/app/{*,*/concerns}", eager_load: true
   end
 end

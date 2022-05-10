@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.0"
+ruby "~> 3.1"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.4"
@@ -37,7 +39,7 @@ gem "jbuilder"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -48,21 +50,26 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-
-gem 'sorbet-runtime'
-gem 'tapioca'
-gem 'sorbet-rails'
+gem "sorbet-rails"
+gem "sorbet-runtime"
+gem "tapioca"
 
 group :development, :test do
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem 'rspec-rails'
-  gem 'packwerk'
-  gem 'rufo'
+  gem "debug", platforms: %i[mri mingw x64_mingw]
+  gem "packwerk"
+  gem "rspec-rails"
+  gem "rufo", require: false
+
+  # liniting & auditing
+  gem "bundler-audit", require: false
+  gem "rubocop", require: false
+  gem "reek"
+  gem "brakeman"
 end
 
 group :development do
+  gem "sorbet"
   gem "web-console"
-  gem 'sorbet'
 end
 
 group :test do
