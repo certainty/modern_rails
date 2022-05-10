@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :sorbet do
   desc "Typecheck the code base"
   task check: :environment do
