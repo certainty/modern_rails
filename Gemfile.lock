@@ -146,6 +146,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.4-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.4-x86_64-linux)
+      racc (~> 1.4)
     packwerk (2.2.0)
       activesupport (>= 5.2)
       ast
@@ -251,6 +253,7 @@ GEM
       sorbet-runtime (>= 0.5.9892)
     sorbet-runtime (0.5.9959)
     sorbet-static (0.5.9959-universal-darwin-17)
+    sorbet-static (0.5.9959-x86_64-linux)
     spoom (1.1.11)
       sorbet (>= 0.5.9204)
       sorbet-runtime (>= 0.5.9204)
@@ -309,6 +312,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-17
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
