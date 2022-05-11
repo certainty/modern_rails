@@ -40,14 +40,14 @@ jobs:
         with:
           bundler-cache: true
       - name: Format
-        run: bundle exec rufo -c .
+        run: bin/rufo -c .
       # Add or replace any other lints here
       - name: Security audit dependencies
-        run: bundle exec bundler-audit --update
+        run: bin/bundler-audit --update
       - name: Security audit application code
-        run: bundle exec brakeman -q -w2
+        run: bin/brakeman -q -w2
       - name: Lint Ruby files
-        run: bundle exec rubocop --parallel
+        run: bin/rubocop --parallel
 
   typecheck:
     runs-on: ubuntu-latest
@@ -70,4 +70,4 @@ jobs:
         with:
           bundler-cache: true
       - name: Check packwerk
-        run: bundle exec packwerk check
+        run: bin/packwerk check
