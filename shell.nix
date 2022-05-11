@@ -1,4 +1,7 @@
 { pkgs ? import <nixpkgs> {} }:
   pkgs.mkShell {
-    nativeBuildInputs = [ pkgs.buildPackages.ruby_3_1 ];
+    nativeBuildInputs = [ 
+      pkgs.watchman
+      pkgs.buildPackages.ruby_3_1 
+    ];
 }
