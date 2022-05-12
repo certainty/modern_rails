@@ -1,4 +1,0 @@
-example_id                                        | status  | run_time        |
-------------------------------------------------- | ------- | --------------- |
-./packages/timeline/spec/models/post_spec.rb[1:1] | pending | 0.00002 seconds |
-./packages/timeline/spec/models/user_spec.rb[1:1] | pending | 0.00001 seconds |
