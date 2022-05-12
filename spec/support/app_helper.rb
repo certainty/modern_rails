@@ -7,7 +7,7 @@ RSpec.configure do |config|
   config.define_derived_metadata(file_path: Regexp.new("/packages/.*/spec/system")) { |metadata| metadata[:type] = :system }
   config.define_derived_metadata(file_path: Regexp.new("/packages/.*/spec/views")) { |metadata| metadata[:type] = :view }
 
-  config.before(:each, :type => lambda { |v| v == :view }) do
+  config.before(:each, type: ->(v) { v == :view }) do
     Dir.glob(Rails.root + ("packages/*/app/views")).each do |path|
       view.lookup_context.view_paths.push path
     end
