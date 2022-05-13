@@ -58,12 +58,16 @@ group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "packwerk"
   gem "rspec-rails"
-  gem "rufo", require: false
+
+  # ide 
+  gem "solargraph"
 
   # liniting & auditing
+  gem "rufo", require: false
   gem "bundler-audit", require: false
   gem "rubocop", require: false
   gem "reek"
+  gem "fasterer"
   gem "brakeman"
 end
 
